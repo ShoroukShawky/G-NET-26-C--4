@@ -104,7 +104,7 @@ namespace c_04
             Console.WriteLine($"final price: {price} LE");
             */
             #endregion
-            #region
+            #region Q3
             // (a) A traditional switch statement:
             //string fileExtension = ".pdf";
             //string fileType;
@@ -146,6 +146,16 @@ namespace c_04
             //    ".jpg" or ".png" or ".gif" => "image document",
             //    _ => "Unknown file type"
             //};
+            #endregion
+            #region Q4
+            //int temp = 35;
+            //string weatherAdvice =
+            //    temp < 0 ? "freezing! stay indoors" :
+            //    temp < 15 ? "cold.wear a jacket" :
+            //    temp < 25 ? "pleasant weather" :
+            //    temp < 35 ? "warm. stay hydrated" : "hot! avoid sun exposure";
+            //ternary operators are best used for simple and short conditions , like this code
+            //if-else statements are more readable and maintainable for complex logic or when there are many conditions
             #endregion
         }
     }
