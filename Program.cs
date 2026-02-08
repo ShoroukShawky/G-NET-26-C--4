@@ -158,46 +158,86 @@ namespace c_04
             //if-else statements are more readable and maintainable for complex logic or when there are many conditions
             #endregion
             #region Q5
-            int attempts = 0;
-            do
+            //    int attempts = 0;
+            //    do
+            //    {
+            //        attempts++;
+            //        Console.WriteLine("enter your password");
+            //        string password = Console.ReadLine();
+            //        bool upperCaseLetter = false, digit = false, spaces = false;
+
+            //        foreach (char c in password)
+            //        {
+            //            if (char.IsDigit(c))
+            //                digit = true;
+            //            if (char.IsUpper(c))
+            //                upperCaseLetter = true;
+            //            if (char.IsWhiteSpace(c))
+            //                spaces = true;
+            //        }
+            //        if (password.Length >= 8 && upperCaseLetter == true && spaces == false && digit == true)
+            //        {
+            //            Console.WriteLine("Password accepted!");
+            //            break;
+            //        }
+            //        if (!upperCaseLetter)
+            //            Console.WriteLine("password must contain uppercase letter!");
+            //        if (password.Length < 8)
+            //            Console.WriteLine("minimum 8 characters!");
+            //        if (!digit)
+            //            Console.WriteLine("password must contain at least one digit!");
+            //        if (spaces)
+            //            Console.WriteLine("no spaces allowed");
+
+            //        if (attempts == 5)
+            //        {
+            //            Console.WriteLine("account locked!");
+            //            break;
+            //        }
+
+            //        #endregion
+            //    }
+            //    while (true);
+            #endregion
+            #region Q6
+            int[] scores = { 85, 42, 67, 55, 78, 39, 88, 72, 95, 60, 48 };
+
+            int A = 0, B = 0, C = 0, D = 0, F = 0;
+            double sum = 0.0 , count = 0.0;
+            foreach (int i in scores)
             {
-                attempts++;
-                Console.WriteLine("enter your password");
-                string password = Console.ReadLine();
-                bool upperCaseLetter = false, digit = false, spaces = false;
+                if(i < 50)
+                    Console.WriteLine($"{i} : fail");
+                if (i > 40)
+                  {  sum += i;
+                    count++;
+                }
 
-                foreach (char c in password)
-                {
-                    if (char.IsDigit(c))
-                        digit = true;
-                    if (char.IsUpper(c))
-                        upperCaseLetter = true;
-                    if (char.IsWhiteSpace(c))
-                        spaces = true;
-                }
-                if (password.Length >= 8 && upperCaseLetter == true && spaces == false && digit == true)
-                {
-                    Console.WriteLine("Password accepted!");
-                    break;
-                }
-                if (!upperCaseLetter)
-                    Console.WriteLine("password must contain uppercase letter!");
-                if (password.Length < 8)
-                    Console.WriteLine("minimum 8 characters!");
-                if (!digit)
-                    Console.WriteLine("password must contain at least one digit!");
-                if (spaces)
-                    Console.WriteLine("no spaces allowed");
-
-                if (attempts == 5)
-                {
-                    Console.WriteLine("account locked!");
-                    break;
-                }
-              
-                #endregion
+                if (i >= 90)
+                    A++;
+                else if (i >= 80)
+                    B++;
+                else if(i >=70)
+                    C++;
+                else if (i >= 60)
+                    D++;
+                else
+                    F++;
             }
-            while (true);
+            Console.WriteLine($"average scores : {sum / count}");
+            Console.WriteLine($"A : {A}\nB : {B}\nC : {C}\nD : {D}\nF : {F}");
+
+            foreach (int i in scores)
+            {
+                if (i > 90)
+                {
+                    Console.WriteLine($"first above 90 : {i}");
+                    break;
+                }
+            }
+            #endregion
         }
+
     }
-}
+    }
+
