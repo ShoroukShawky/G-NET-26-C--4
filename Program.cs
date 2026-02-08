@@ -157,6 +157,47 @@ namespace c_04
             //ternary operators are best used for simple and short conditions , like this code
             //if-else statements are more readable and maintainable for complex logic or when there are many conditions
             #endregion
+            #region Q5
+            int attempts = 0;
+            do
+            {
+                attempts++;
+                Console.WriteLine("enter your password");
+                string password = Console.ReadLine();
+                bool upperCaseLetter = false, digit = false, spaces = false;
+
+                foreach (char c in password)
+                {
+                    if (char.IsDigit(c))
+                        digit = true;
+                    if (char.IsUpper(c))
+                        upperCaseLetter = true;
+                    if (char.IsWhiteSpace(c))
+                        spaces = true;
+                }
+                if (password.Length >= 8 && upperCaseLetter == true && spaces == false && digit == true)
+                {
+                    Console.WriteLine("Password accepted!");
+                    break;
+                }
+                if (!upperCaseLetter)
+                    Console.WriteLine("password must contain uppercase letter!");
+                if (password.Length < 8)
+                    Console.WriteLine("minimum 8 characters!");
+                if (!digit)
+                    Console.WriteLine("password must contain at least one digit!");
+                if (spaces)
+                    Console.WriteLine("no spaces allowed");
+
+                if (attempts == 5)
+                {
+                    Console.WriteLine("account locked!");
+                    break;
+                }
+              
+                #endregion
+            }
+            while (true);
         }
     }
 }
