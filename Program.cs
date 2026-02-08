@@ -53,6 +53,57 @@ namespace c_04
             Console.WriteLine($"Time Difference: {stringTime - builderTime} ms");
        */
             #endregion
+            #region Q2
+            /*
+            Console.Write("Enter age: ");
+            int age = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter day (1-7): ");
+            int day = int.Parse(Console.ReadLine());
+
+            Console.Write("Student ID? (yes/no): ");
+            bool isStudent = Console.ReadLine().ToLower() == "yes";
+            double price = 0;
+            string breakdown = "";
+            if (age < 5)
+            {
+                price = 0;
+                breakdown = "free ticket";
+            }
+            else if (age <= 12)
+            {
+                price = 30;
+                breakdown = "price: 30 LE";
+            }
+            else if (age <= 59)
+            {
+                price = 50;
+                breakdown = "price: 50 LE";
+            }
+            else
+            {
+                price = 25;
+                breakdown = "price: 25 LE";
+            }
+
+     
+            if (price > 0 && (day == 6 || day == 7))
+            {
+                price += 10;
+                breakdown += "\nweekend surcharge: +10 LE";
+            }
+            if (price > 0 && isStudent)
+            {
+                double discount = price * 0.2;
+                price -= discount;
+                breakdown += $"\nstudent discount: -{discount} LE";
+            }
+
+            Console.WriteLine("\n--- ticket breakdown ---");
+            Console.WriteLine(breakdown);
+            Console.WriteLine($"final price: {price} LE");
+            */
+            #endregion
         }
     }
 }
