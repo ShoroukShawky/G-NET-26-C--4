@@ -104,6 +104,49 @@ namespace c_04
             Console.WriteLine($"final price: {price} LE");
             */
             #endregion
+            #region
+            // (a) A traditional switch statement:
+            //string fileExtension = ".pdf";
+            //string fileType;
+
+            //switch (fileExtension)
+            //{
+            //    case ".pdf":
+            //     fileType = "PDF document";
+            //      break;
+
+            //    case ".docx":
+            //    case ".doc":
+            //        fileType = "word document";
+            //        break;
+
+            //    case ".xlsx":
+            //    case ".xls":
+            //        fileType = "excel document";
+            //        break;
+
+            //    case ".jpg":
+            //    case ".png":
+            //    case ".gif":
+            //        fileType = "image document";
+            //        break;
+
+            //    default:
+            //        fileType = "unknown file type";
+            //        break;
+            //}
+
+            // (b) A switch expression:
+            //string fileExtension = ".pdf";
+            //string fileType = fileExtension switch
+            //{
+            //    ".pdf" => "PDF document",
+            //    ".docx" or ".doc" => "Word document",
+            //    ".xlsx" or ".xls" => "excel document",
+            //    ".jpg" or ".png" or ".gif" => "image document",
+            //    _ => "Unknown file type"
+            //};
+            #endregion
         }
     }
 }
